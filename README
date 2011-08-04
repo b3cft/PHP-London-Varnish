@@ -1,0 +1,20 @@
+Files relating to my talk at PHP London
+http://www.meetup.com/phplondon/events/17539656/
+
+Usage:
+Install Varnish 
+https://www.varnish-cache.org/docs/2.1/installation/install.html
+
+clone this repo to a folder accessible by your local webserver
+
+Copy varnish files listed below into relevant locations
+ cp varnish    /etc/sysconfig/varnish
+ cp b3cft.vcl  /etc/varnish/b3cft.vcl
+
+* Hit your webserver on port 80
+* Hit your varnish server on port 6081 
+* Observe differences in headers and hits on webserver
+
+e.g. 
+http://localhost/PHP-London-Varnish/example1-no-headers.php
+http://localhost:6081/PHP-London-Varnish/example1-no-headers.php
